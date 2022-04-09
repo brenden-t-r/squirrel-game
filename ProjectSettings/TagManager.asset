@@ -12,6 +12,7 @@ TagManager:
   - MeterR2
   - MeterR3
   - Spider
+  - Acorn
   layers:
   - Default
   - TransparentFX
