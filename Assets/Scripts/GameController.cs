@@ -11,8 +11,10 @@ public class GameController : MonoBehaviour
     [SerializeField] private BGTreeTexture tree;
     [SerializeField] private Score score;
     [SerializeField] private SpiderController spider;
+    [SerializeField] private AcornController acorn;
     [SerializeField] private Death death;
     [SerializeField] private Animator squirrelAnimator;
+    [SerializeField] private SoundController soundController;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +30,12 @@ public class GameController : MonoBehaviour
         }
         if (death.isDead && playEnabled) {
             playEnabled = false;
+            soundController.Die();
             balanceMeter.Die();
             tree.Die();
             score.Die();
             spider.Die();
+            acorn.Die();
         }
         if (death.isDead && Input.GetKeyDown(KeyCode.Space)) {
             SceneManager.LoadScene( SceneManager.GetActiveScene().name );
@@ -61,7 +65,9 @@ public class GameController : MonoBehaviour
         tree.playEnabled = true;
         score.playEnabled = true;
         spider.playEnabled = true;
+        acorn.playEnabled = true;
         squirrelAnimator.SetBool("PlayEnabled", true);
+        soundController.StartGame();
         playEnabled = true;
     }
 

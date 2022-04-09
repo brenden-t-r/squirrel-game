@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpiderController : MonoBehaviour
+public class AcornController : MonoBehaviour
 {
 
     [HideInInspector] public bool playEnabled;
-    [SerializeField] private GameObject spider;
+    [SerializeField] private GameObject acorn;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private float speed;
     [SerializeField] private SoundController soundController;
-    private const float X_OFFSET_LEFT = -0.28f;
-    private const float X_OFFSET_MIDDLE = 0.1f;
-    private const float X_OFFSET_RIGHT = 0.69f;
-    private const float Y_OFFSET = 3.2f;
+    private const float X_OFFSET_LEFT = -0.3f;
+    private const float X_OFFSET_MIDDLE = 0f;
+    private const float X_OFFSET_RIGHT = 0.597f;
+    private const float Y_OFFSET = 2.6f;
     private System.Random rand = new System.Random();
     private float timeBuffer = 0;
 
@@ -27,27 +28,33 @@ public class SpiderController : MonoBehaviour
     void Update()
     {
         if (!playEnabled) return;
-        if (timeBuffer < 15) {
+        if (timeBuffer < 12) {
             timeBuffer += Time.deltaTime;
         } else {
-            SpawnSpider();
+            Spawn();
             timeBuffer = 0;
         }
+
     }
 
-    void SpawnSpider() {
+    void Spawn() {
         float placement = GetRandomPlacement();
-        spider.transform.position = new Vector2(placement, Y_OFFSET);
+        acorn.transform.position = new Vector2(placement, Y_OFFSET);
+        spriteRenderer.enabled = true;
         rb.velocity = new Vector2(0f, -1 * speed * Time.deltaTime);
-        soundController.Spider();
+        soundController.Acorn();
     }
 
     float GetRandomPlacement() {
         int dir = rand.Next(-1, 2);
-        Debug.Log(dir);
         if (dir == -1) return X_OFFSET_LEFT;
         else if (dir == 0) return X_OFFSET_MIDDLE;
         else return X_OFFSET_RIGHT;
+    }
+
+    public void Eat() {
+        soundController.Eat();
+        spriteRenderer.enabled = false;
     }
 
     public void Die() {

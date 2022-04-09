@@ -6,6 +6,7 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     public int score;
+    public int acornsCollected;
     public bool playEnabled;
     [SerializeField] private GameObject go;
     private TextMeshProUGUI textMeshPro;
@@ -27,7 +28,7 @@ public class Score : MonoBehaviour
             startTime = Time.time;
         }
         float timeSinceStart = Time.time - startTime;
-        score = (int)System.Math.Floor(timeSinceStart);
+        score = (int)System.Math.Floor(timeSinceStart) + (10 * acornsCollected);
         textMeshPro.SetText(score.ToString());
     }
 

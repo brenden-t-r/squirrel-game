@@ -10,19 +10,13 @@ public class BalanceMeter : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private SpriteRenderer squirrelRenderer;
     [SerializeField] private BoxCollider2D boxCollider2D;
-
     [SerializeField] private Animator squirrelAnimator;
     [SerializeField] private Death death;
-    [SerializeField] private Sprite sprite1;
-    [SerializeField] private Sprite sprite2;
-    [SerializeField] private Sprite sprite3;
-    [SerializeField] private Sprite sprite4;
-    [SerializeField] private Sprite sprite5;
+    [SerializeField] private SoundController soundController;
     private Vector2 startPosition;
     private float startSpeed;
     private float startTurbulenceSpeed;
     private float turbulenceResetTime = 0f;
-
     private float noiseResetTime = 0f;
     public float noiseSpeed;
     
@@ -90,43 +84,41 @@ right2
             if (rb.velocity.x < 0) {
                 squirrelAnimator.SetInteger("MeterState", 1);
                 setCollider(-0.3986315f, 0.7209724f, 0.2922962f, 0.2615988f);
-                // squirrelRenderer.sprite = sprite1;
+                soundController.UhOh();
             } else {
                 squirrelAnimator.SetInteger("MeterState", 2);
                 setCollider(-0.1495346f, 0.8588654f,  0.2211256f, 0.4128363f);
-                // squirrelRenderer.sprite = sprite2;
             }
         }
         if (other.CompareTag("MeterL1")) {
             if (rb.velocity.x < 0) {
                 squirrelAnimator.SetInteger("MeterState", 2);
                 setCollider(-0.1495346f, 0.8588654f,  0.2211256f, 0.4128363f);
-                // squirrelRenderer.sprite = sprite2;
+                // soundController.UhOh();
             } else {
                 squirrelAnimator.SetInteger("MeterState", 3);
                 setCollider(-0.1495346f, 0.8588654f,  0.2211256f, 0.4128363f);
-                // squirrelRenderer.sprite = sprite3;
+                // soundController.Relief();
             }
         }
         if (other.CompareTag("MeterR1")) {
              if (rb.velocity.x > 0) {
                  squirrelAnimator.SetInteger("MeterState", 4);
-                // squirrelRenderer.sprite = sprite4;
                 setCollider(0.2196624f, 0.8988988f, 0.2656075f, 0.2971841f);
+                // soundController.UhOh();
             } else {
                 squirrelAnimator.SetInteger("MeterState", 3);
-                // squirrelRenderer.sprite = sprite3;
                 setCollider(-0.1495346f, 0.8588654f,  0.2211256f, 0.4128363f);
+                // soundController.Relief();
             }
         }
         if (other.CompareTag("MeterR2")) {
             if (rb.velocity.x > 0) {
                 squirrelAnimator.SetInteger("MeterState", 5);
                 setCollider(0.4198296f, 0.7209724f, 0.2922964f, 0.2615988f);
-                // squirrelRenderer.sprite = sprite5;
+                soundController.UhOh();
             } else {
                 squirrelAnimator.SetInteger("MeterState", 4);
-                // squirrelRenderer.sprite = sprite4;
                 setCollider(0.2196624f, 0.8988988f, 0.2656075f, 0.2971841f);
             }
         }
@@ -139,7 +131,6 @@ right2
         rb.position = startPosition;
         speed = startSpeed;
         turbulenceSpeed = startTurbulenceSpeed;
-        squirrelRenderer.sprite = sprite3;
     }
 
     private void setCollider(float offsetX, float offsetY, float sizeX, float sizeY) {
