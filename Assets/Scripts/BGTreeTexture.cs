@@ -33,7 +33,7 @@ public class BGTreeTexture : MonoBehaviour
     public void SpeedUp() {
         startTime = Time.time;
         offsetBuffer = r.material.mainTextureOffset;
-        speed += 0.05f;
+        speed += 0.07f;
     }
 
     public void Die() {

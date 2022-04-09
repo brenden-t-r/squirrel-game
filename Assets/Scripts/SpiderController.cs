@@ -26,7 +26,7 @@ public class SpiderController : MonoBehaviour
     void Update()
     {
         if (!playEnabled) return;
-        if (timeBuffer < 10) {
+        if (timeBuffer < 12) {
             timeBuffer += Time.deltaTime;
         } else {
             SpawnSpider();

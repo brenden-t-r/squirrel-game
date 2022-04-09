@@ -8,11 +8,11 @@ public class GameController : MonoBehaviour
     private bool playEnabled = false;
     [SerializeField] private Camera cam;
     [SerializeField] private BalanceMeter balanceMeter;
-    // [SerializeField] private BGTree bgTree;
     [SerializeField] private BGTreeTexture tree;
     [SerializeField] private Score score;
     [SerializeField] private SpiderController spider;
     [SerializeField] private Death death;
+    [SerializeField] private Animator squirrelAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -61,6 +61,7 @@ public class GameController : MonoBehaviour
         tree.playEnabled = true;
         score.playEnabled = true;
         spider.playEnabled = true;
+        squirrelAnimator.SetBool("PlayEnabled", true);
         playEnabled = true;
     }
 
