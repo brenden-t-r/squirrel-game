@@ -47,9 +47,10 @@ public class GameController : MonoBehaviour
 
     private void BeginGame()
     {
+        soundController.IntroTransition();
         List<IEnumerator> list = new List<IEnumerator>();
         Vector3 end = new Vector3(cam.transform.position.x + 6.4f, 0f);
-        list.Add(Utils.StaticUtils.MoveOverSeconds(cam.transform, end, 1.5f));
+        list.Add(Utils.StaticUtils.MoveOverSeconds(cam.transform, end, 3f));
         list.Add(EnablePlayControllersAsync());
         list.Add(StartPlaySequence());
         StartCoroutine(UtilsMono.couroutineSequenceWithPause(list, 0f, false));

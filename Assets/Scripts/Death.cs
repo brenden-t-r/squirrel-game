@@ -9,6 +9,7 @@ public class Death : MonoBehaviour
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI scoreValue;
+    [SerializeField] private Follower deathSpider;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Death : MonoBehaviour
 
     public void Die() {
         sr.enabled = true;
+        deathSpider.enabled = true;
         scoreText.enabled = true;
         scoreValue.enabled = true;
         isDead = true;

@@ -12,6 +12,7 @@ public class SoundController : MonoBehaviour
     public AudioSource[] soundsUhOh;
     public AudioSource[] soundsRelief;
     public AudioSource soundSpiderChatter;
+    public AudioSource startSound;
     private bool isPlayEnabled = true;
     private System.Random rand = new System.Random();
 
@@ -31,12 +32,18 @@ public class SoundController : MonoBehaviour
         soundsUhOh = GameObject.Find("SoundsUhOh").GetComponentsInChildren<AudioSource>(false);
         soundsRelief = GameObject.Find("SoundsRelief").GetComponentsInChildren<AudioSource>(false);
         soundSpiderChatter = GameObject.Find("SoundsSpiderChatter").GetComponents<AudioSource>()[0];
+        startSound = GameObject.Find("StartSound").GetComponents<AudioSource>()[0];
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void IntroTransition() {
+        this.StartCoroutine(Utils.StaticUtils.AudioFadeOut(currentMusic, 3.1f));
+        this.startSound.Play();
     }
 
     public void StartGame() {
@@ -51,6 +58,10 @@ public class SoundController : MonoBehaviour
         currentMusic.Stop();
         soundsMusic[0].Stop();
         soundsMusic[2].Play();
+        soundSpiderChatter.loop = true;
+        soundSpiderChatter.volume = 0.3f;
+        soundSpiderChatter.pitch = 0.3f;
+        soundSpiderChatter.Play();
     }
 
     public void Eat() {
