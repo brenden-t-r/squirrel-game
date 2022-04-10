@@ -25,7 +25,7 @@ public class SpiderController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!playEnabled) return;
         if (timeBuffer > 5 && !survivedSoundPlayed) {

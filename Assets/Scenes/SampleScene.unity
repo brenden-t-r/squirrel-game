@@ -774,7 +774,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1590000639
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1999714445, guid: b1aef06b2de84cc4194dbc7a5eac27b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4615,7 +4615,7 @@ MonoBehaviour:
   acorn: {fileID: 993603707}
   rb: {fileID: 993603710}
   spriteRenderer: {fileID: 993603708}
-  speed: 150
+  speed: 40
   soundController: {fileID: 373881923}
 --- !u!1 &1044060035
 GameObject:
@@ -5333,7 +5333,7 @@ MonoBehaviour:
   playEnabled: 0
   spider: {fileID: 1123587173}
   rb: {fileID: 1123587178}
-  speed: 190
+  speed: 50
   soundController: {fileID: 373881923}
 --- !u!1 &1136941235
 GameObject:

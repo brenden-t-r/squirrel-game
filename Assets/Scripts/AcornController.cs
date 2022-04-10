@@ -25,8 +25,7 @@ public class AcornController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    private void FixedUpdate() {
         if (!playEnabled) return;
         if (timeBuffer < 15) {
             timeBuffer += Time.deltaTime;
@@ -34,7 +33,6 @@ public class AcornController : MonoBehaviour
             Spawn();
             timeBuffer = 0;
         }
-
     }
 
     void Spawn() {
