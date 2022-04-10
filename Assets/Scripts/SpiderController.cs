@@ -16,6 +16,7 @@ public class SpiderController : MonoBehaviour
     private const float Y_OFFSET = 3.2f;
     private System.Random rand = new System.Random();
     private float timeBuffer = 0;
+    private bool survivedSoundPlayed = true;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,16 @@ public class SpiderController : MonoBehaviour
     void Update()
     {
         if (!playEnabled) return;
+        if (timeBuffer > 5 && !survivedSoundPlayed) {
+            survivedSoundPlayed = true;
+            soundController.Relief();
+        }
         if (timeBuffer < 15) {
             timeBuffer += Time.deltaTime;
         } else {
             SpawnSpider();
             timeBuffer = 0;
+            survivedSoundPlayed = false;
         }
     }
 

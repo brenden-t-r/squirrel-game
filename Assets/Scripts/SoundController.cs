@@ -49,6 +49,7 @@ public class SoundController : MonoBehaviour
     public void Die() {
         isPlayEnabled = false;
         currentMusic.Stop();
+        soundsMusic[0].Stop();
         soundsMusic[2].Play();
     }
 

@@ -167,8 +167,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e97c69e6425fe304ca07f6e930853513, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -261,13 +261,14 @@ GameObject:
   m_Component:
   - component: {fileID: 60964384}
   - component: {fileID: 60964385}
+  - component: {fileID: 60964386}
   m_Layer: 0
   m_Name: Uhoh4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &60964384
 Transform:
   m_ObjectHideFlags: 0
@@ -290,7 +291,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60964383}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0db24c8f8d70c4a44b7186e57f0af495, type: 3}
@@ -379,6 +380,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &60964386
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60964383}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &75323688
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,8 +558,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6896936a15b720a469b0bd00e008eec6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -739,6 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114881838}
   - component: {fileID: 114881839}
+  - component: {fileID: 114881840}
   m_Layer: 0
   m_Name: Uhoh8
   m_TagString: Untagged
@@ -857,6 +882,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &114881840
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114881837}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &224827080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245782773}
   - component: {fileID: 245782774}
+  - component: {fileID: 245782775}
   m_Layer: 0
   m_Name: BirdsChirping
   m_TagString: Untagged
@@ -1076,9 +1125,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 98cf1f4f4ad2fbd46808ec22ed6a6e34, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 671f8f8c5db09e14e82fb19de072ea98, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1122,7 +1171,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -1162,6 +1211,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &245782775
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245782772}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: -500
+  m_DecayTime: 3.92
+  m_DecayHFRatio: 0.7
+  m_ReflectionsLevel: -1230
+  m_ReverbLevel: -2
+  m_ReverbDelay: 0.029
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 8
 --- !u!1 &252528208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,8 +1541,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 03886b287f235f54cbdefbc816f9b5ce, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1871,6 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468066728}
   - component: {fileID: 468066729}
+  - component: {fileID: 468066730}
   m_Layer: 0
   m_Name: Uhoh13
   m_TagString: Untagged
@@ -1989,6 +2062,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &468066730
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468066727}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &507400123
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,6 +2570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622341875}
   - component: {fileID: 622341876}
+  - component: {fileID: 622341877}
   m_Layer: 0
   m_Name: Uhoh3
   m_TagString: Untagged
@@ -2592,6 +2689,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &622341877
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622341874}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &668491180
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,6 +2722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 668491181}
   - component: {fileID: 668491182}
+  - component: {fileID: 668491183}
   m_Layer: 0
   m_Name: Uhoh2
   m_TagString: Untagged
@@ -2720,6 +2841,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &668491183
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668491180}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &671080156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 736439854}
   - component: {fileID: 736439855}
+  - component: {fileID: 736439856}
   m_Layer: 0
   m_Name: DeathBang
   m_TagString: Untagged
@@ -3155,6 +3300,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &736439856
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736439853}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: -6000
+  m_DecayTime: 0.17
+  m_DecayHFRatio: 0.1
+  m_ReflectionsLevel: -1204
+  m_ReverbLevel: 207
+  m_ReverbDelay: 0.002
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 2
 --- !u!1 &781143521
 GameObject:
   m_ObjectHideFlags: 0
@@ -4070,8 +4238,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eda81a4dacd8d2744ae2a52c92987e60, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4346,8 +4514,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d6e469b32eb57e54a9261130260b8008, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -4440,6 +4608,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108531950}
   - component: {fileID: 1108531951}
+  - component: {fileID: 1108531952}
   m_Layer: 0
   m_Name: Uhoh5
   m_TagString: Untagged
@@ -4558,6 +4727,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1108531952
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1108531949}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1123587173
 GameObject:
   m_ObjectHideFlags: 0
@@ -4730,6 +4922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136941236}
   - component: {fileID: 1136941237}
+  - component: {fileID: 1136941238}
   m_Layer: 0
   m_Name: Uhoh11
   m_TagString: Untagged
@@ -4759,7 +4952,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136941235}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 65f204fb663a88b4da5a609babdb9426, type: 3}
@@ -4848,6 +5041,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1136941238
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136941235}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1209913725
 GameObject:
   m_ObjectHideFlags: 0
@@ -5367,8 +5583,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1fa0430c7b9bc064194447b2beee0d66, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -5461,6 +5677,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1533785894}
   - component: {fileID: 1533785895}
+  - component: {fileID: 1533785896}
   m_Layer: 0
   m_Name: Uhoh10
   m_TagString: Untagged
@@ -5579,6 +5796,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1533785896
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533785893}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1619753680
 GameObject:
   m_ObjectHideFlags: 0
@@ -5623,8 +5863,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cd88b78571b5c9f469eb922e02592d0a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -5751,8 +5991,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e9ae74a914610d04baaf65212237ecd0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -5946,6 +6186,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642886601}
   - component: {fileID: 1642886602}
+  - component: {fileID: 1642886603}
   m_Layer: 0
   m_Name: Uhoh6
   m_TagString: Untagged
@@ -6064,6 +6305,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1642886603
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642886600}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1652131968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,6 +6338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1652131970}
   - component: {fileID: 1652131969}
+  - component: {fileID: 1652131971}
   m_Layer: 0
   m_Name: SoundsSpiderChatter
   m_TagString: Untagged
@@ -6091,7 +6356,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 88b774cdc4beb884b85d93b5905503ee, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1ee39312c29de1c49922146f18d824fb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6192,6 +6457,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!164 &1652131971
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652131968}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: -3300
+  m_DecayTime: 1.49
+  m_DecayHFRatio: 0.54
+  m_ReflectionsLevel: -2560
+  m_ReverbLevel: -229
+  m_ReverbDelay: 0.088
+  m_Diffusion: 79
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 16
 --- !u!1 &1686684413
 GameObject:
   m_ObjectHideFlags: 0
@@ -6392,8 +6680,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f29f96683c0d81d44b5b207ecbf6d8a3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.75
+  m_Pitch: 0.9
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -6614,6 +6902,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740125318}
   - component: {fileID: 1740125319}
+  - component: {fileID: 1740125320}
   m_Layer: 0
   m_Name: Uhoh7
   m_TagString: Untagged
@@ -6732,6 +7021,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1740125320
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740125317}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1742883020
 GameObject:
   m_ObjectHideFlags: 0
@@ -6777,6 +7089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1757924705}
   - component: {fileID: 1757924706}
+  - component: {fileID: 1757924707}
   m_Layer: 0
   m_Name: JungleBeatDrums
   m_TagString: Untagged
@@ -6811,8 +7124,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 904f39607895e0d4390c6edf36a68a66, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.7
-  m_Pitch: 1.72
+  m_Volume: 0.9
+  m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -6895,6 +7208,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!166 &1757924707
+AudioChorusFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757924704}
+  m_Enabled: 1
+  m_DryMix: 0.5
+  m_WetMix1: 0.5
+  m_WetMix2: 0.5
+  m_WetMix3: 0.5
+  m_Delay: 40
+  m_Rate: 0.8
+  m_Depth: 0.6
 --- !u!1 &1770242270
 GameObject:
   m_ObjectHideFlags: 0
@@ -6905,6 +7233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1770242271}
   - component: {fileID: 1770242272}
+  - component: {fileID: 1770242273}
   m_Layer: 0
   m_Name: Uhoh12
   m_TagString: Untagged
@@ -6934,7 +7263,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770242270}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ed0b7752747255349b3483f8561285f7, type: 3}
@@ -7023,6 +7352,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1770242273
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770242270}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1906990838
 GameObject:
   m_ObjectHideFlags: 0
@@ -7033,6 +7385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906990839}
   - component: {fileID: 1906990840}
+  - component: {fileID: 1906990841}
   m_Layer: 0
   m_Name: Uhoh9
   m_TagString: Untagged
@@ -7151,6 +7504,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1906990841
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906990838}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1914580591
 GameObject:
   m_ObjectHideFlags: 0
@@ -7272,6 +7648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1942568457}
   - component: {fileID: 1942568458}
+  - component: {fileID: 1942568459}
   m_Layer: 0
   m_Name: Uhoh1
   m_TagString: Untagged
@@ -7390,6 +7767,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!164 &1942568459
+AudioReverbFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942568456}
+  m_Enabled: 1
+  m_DryLevel: 0
+  m_Room: -1000
+  m_RoomHF: 0
+  m_DecayTime: 1.65
+  m_DecayHFRatio: 1.5
+  m_ReflectionsLevel: -1363
+  m_ReverbLevel: -1153
+  m_ReverbDelay: 0.012
+  m_Diffusion: 100
+  m_Density: 100
+  m_HFReference: 5000
+  m_RoomLF: 0
+  m_LFReference: 250
+  m_ReflectionsDelay: 0
+  m_ReverbPreset: 21
 --- !u!1 &1985079710
 GameObject:
   m_ObjectHideFlags: 0

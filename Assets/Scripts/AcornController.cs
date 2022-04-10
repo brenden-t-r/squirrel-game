@@ -16,7 +16,7 @@ public class AcornController : MonoBehaviour
     private const float X_OFFSET_RIGHT = 0.597f;
     private const float Y_OFFSET = 2.6f;
     private System.Random rand = new System.Random();
-    private float timeBuffer = 0;
+    private float timeBuffer = 7.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class AcornController : MonoBehaviour
     void Update()
     {
         if (!playEnabled) return;
-        if (timeBuffer < 12) {
+        if (timeBuffer < 15) {
             timeBuffer += Time.deltaTime;
         } else {
             Spawn();
