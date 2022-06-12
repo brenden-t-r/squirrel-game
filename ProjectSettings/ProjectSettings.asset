@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Squirrel
+  companyName: Alex Piccouli
+  productName: Tree Squirrel
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 1, g: 1, b: 1, a: 1}
@@ -42,8 +42,8 @@ PlayerSettings:
   m_SplashScreenLogos: []
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
-  defaultScreenWidth: 320
-  defaultScreenHeight: 180
+  defaultScreenWidth: 640
+  defaultScreenHeight: 360
   defaultScreenWidthWeb: 640
   defaultScreenHeightWeb: 360
   m_StereoRenderingPath: 0

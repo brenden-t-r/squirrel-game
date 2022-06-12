@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
     [SerializeField] private Death death;
     [SerializeField] private Animator squirrelAnimator;
     [SerializeField] private SoundController soundController;
+    [SerializeField] private Animator titleAnimator;
+    private bool useGamepad = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!playEnabled && !death.isDead && Input.GetKeyDown(KeyCode.Space)) {
+        CheckForGamepad(); 
+        if (!playEnabled && !death.isDead && Input.anyKeyDown) {
             playEnabled = true;
             BeginGame();
         }
@@ -37,7 +40,7 @@ public class GameController : MonoBehaviour
             spider.Die();
             acorn.Die();
         }
-        if (death.isDead && Input.GetKeyDown(KeyCode.Space)) {
+        if (death.isDead && Input.anyKeyDown) {
             SceneManager.LoadScene( SceneManager.GetActiveScene().name );
             // death.Reset();
             // EnablePlayControllers();
@@ -99,17 +102,16 @@ public class GameController : MonoBehaviour
         yield return null;
     }
 
-    public IEnumerator MoveOverSeconds(Transform objectToMove, Vector3 end, float seconds)
+    private void CheckForGamepad()
     {
-        float elapsedTime = 0;
-        Vector3 startingPos = objectToMove.transform.position;
-        while (elapsedTime < seconds)
+        foreach (var str in Input.GetJoystickNames())
         {
-            objectToMove.transform.position = Vector3.Lerp(startingPos, end, (elapsedTime / seconds));
-            elapsedTime += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
+            if (str.Length > 0)
+            {
+                titleAnimator.SetBool("useGamepad", true);
+                return;
+            }
         }
-        objectToMove.transform.position = end;
-        playEnabled = true;
+        titleAnimator.SetBool("useGamepad", false);
     }
 }
