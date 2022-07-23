@@ -1,6 +1,6 @@
-# Tree Squirrel (Black and White Game Jam #8 Submission)
+# Tree Squirrel
 
-2D game built in Unity in two weeks.
+2D game built in Unity in two weeks and submitted to the Black and White Game Jam #8.
 
 https://alexpiccouli.itch.io/tree-squirrel
 
